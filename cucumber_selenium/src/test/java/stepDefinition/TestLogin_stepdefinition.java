@@ -25,7 +25,7 @@ public class TestLogin_stepdefinition {
 		
 	@Given("^I open gcrit login$")
 	public void i_open_gcrit_login() throws Exception{
-		//Set implicit wait of 10 seconds and launch google
+		//Set implicit wait of 5 seconds
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
 		driver.get("http://gcrit.com/build3/login");
@@ -46,7 +46,7 @@ public class TestLogin_stepdefinition {
 	public void I_should_get_correct_result() throws Exception {
 		
 				
-		//Verify that result of 2+2 is 4
+		//Verify that result
 		Assert.assertEquals(driver.getPageSource().contains("raj!"), true);
 		
 		driver.close();
